@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/angular-route.min.js"></script>
+    <script src="scripts/controller.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <title>COMP 4621 PROJECT</title>
+</head>
+
+<body>
+
+    <div class="body" ng-controller="LoginController">
+        <div class="content">
+
+            <h2>LOGIN-PORTAL</h2>
+            <p class="{{color}}">{{loginMessage}}</p>
+
+            <form>
+                <input type="text" ng-model="username" placeholder="ENTER YOUR USERNAME">
+                <input type="password" ng-model="password" placeholder="ENTER YOUR PASSWORD">
+                <button ng-click="login()">LOGIN</button>
+
+            </form>
+
+        </div>
+
+        <div ng-if="show" class="boxes">
+            <div ng-if="box1" class="box">NAME: {{name}}</div>
+            <div ng-if="box2" class="box">COURSE: {{course}}</div>
+            <div ng-if="box3" class="box">COUNTRY: {{country}}</div>
+        </div>
+
+    </div>
+</body>
+</html>
